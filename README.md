@@ -58,10 +58,10 @@ ________________________________________________________________________________
    repositories:
      files: delivery_tool.files
      docker: delivery-tool.docker
-  images:
-  - docker.bintray.io/jfrog/artifactory-pro:7.19.8
-  - docker.bintray.io/postgres:13.2-alpine
-  - docker.bintray.io/jfrog/nginx-artifactory-pro:7.19.8
+   images:
+   - docker.bintray.io/jfrog/artifactory-pro:7.19.8
+   - docker.bintray.io/postgres:13.2-alpine
+   - docker.bintray.io/jfrog/nginx-artifactory-pro:7.19.8
 ```
 
 This configuration file needs to contain the Artifactory URL specified if `url` section.
