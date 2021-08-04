@@ -4,9 +4,9 @@ The tool provides artifacts delivery to your local Artifactory storage
 _______________________________________________________________________________________________________________________
 
 There are 3 functions of the Delivery tool:
-- __pack (bold)__   - downloads all the files, copies the images specified in your configuration file and makes an arhive
-- __upload (bold)__ - extracts the archive made in 'pack' function and uploads all the files and images to the Artifactory storage
-- __show (bold)__   - shows you an information about size used in your Generic and Docker repositories
+- __pack__   - downloads all the files, copies the images specified in your configuration file and makes an arhive
+- __upload__ - extracts the archive made in 'pack' function and uploads all the files and images to the Artifactory storage
+- __show__   - shows you an information about size used in your Generic and Docker repositories
 _______________________________________________________________________________________________________________________
 
 ## Requirements
@@ -22,19 +22,24 @@ ________________________________________________________________________________
 ## User guide
 There is an information about Delivery tool usage
 
-- __pack (bold)__
-    usage: **-f config.yaml pack (bold)**
-- __upload (bold)__
-    usage: **-f artifactory.yaml -a ArchContent.zip upload (bold)**
+- __pack__
 
-    *ArchContent.zip is just an archive that is created in the pack option of Delivery tool. (italic)*
-- __show (bold)__
-    usage: **-f artifactory.yaml show (bold)**
+    usage: **-f config.yaml pack**
+
+- __upload__
+
+    usage: **-f artifactory.yaml -a ArchContent.zip upload**
+
+    *ArchContent.zip is just an archive that is created in the pack option of Delivery tool.*
+- __show__
+
+    usage: **-f artifactory.yaml show**
 ________________________________________________________________________________________________________________________
 
 ### The example of config.yaml
 
-```files:
+```
+   files:
    - https://docker.bintray.io/artifactory/bintray-tools/com/jfrog/bintray/client/api/0.2/api-0.2.jar
    - https://docker.bintray.io/artifactory/jfrog-cli/v1/1.0.0/jfrog-cli-linux-386/jfrog
    - https://repo.jfrog.org/artifactory/jcenter-cache/1.0/com/minimalviking/deviceinfo/com.minimalviking.deviceinfo/maven-metadata.xml
@@ -48,7 +53,8 @@ You need to specify file URLs in `files` section and Docker images in `images` s
 _________________________________________________________________________________________________________________________
 ### The example of artifactory.yaml
 
-```url: http://10.0.2.15:8082/artifactory
+```
+   url: http://10.0.2.15:8082/artifactory
    repositories:
      files: delivery_tool.files
      docker: delivery-tool.docker
