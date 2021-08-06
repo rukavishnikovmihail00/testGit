@@ -1,6 +1,8 @@
 # Delivery-tool
 
 The tool provides artifacts delivery to your local Artifactory storage
+
+![](https://raw.githubusercontent.com/rukavishnikovmihail00/testGit/newbranch/delivery_tool.png "Delivery tool")
 _______________________________________________________________________________________________________________________
 
 There are 3 functions of the Delivery tool:
