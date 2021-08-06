@@ -4,9 +4,9 @@ The tool provides artifacts delivery to your local Artifactory storage
 _______________________________________________________________________________________________________________________
 
 There are 3 functions of the Delivery tool:
-- __pack__   - downloads all the files, copies the images specified in your configuration file and makes an arhive
-- __upload__ - extracts the archive made in 'pack' function and uploads all the files and images to the Artifactory storage
-- __show__   - shows you an information about size used in your Generic and Docker repositories
+- __pack__   - read a packing config, download files and docker images using skopeo, create an archive with some structure
+- __upload__ - unpack the archive, parse an uploading config and the archive structure and upload files to Artifactory instance
+- __show__   - show space by a repository
 _______________________________________________________________________________________________________________________
 
 ## Requirements
@@ -28,7 +28,7 @@ There is an information about Delivery tool usage
 
 - __Navigate to the delivery_tool directory__
 
-    usage: **cd DeliveryTool/delivery_tool**
+    usage: **cd delivery_tool**
 ________________________________________________________________________________________________________________________
 
 Now you can use Delivery tool functions:
@@ -44,7 +44,7 @@ Now you can use Delivery tool functions:
     *ArchContent.zip is just an archive that is created in the pack option of Delivery tool.*
 - __show__
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz show -f artifactory.yaml **
+    usage: **python3 delivery-tool-rukavishnikov.pyz show -f artifactory.yaml**
 ________________________________________________________________________________________________________________________
 
 ### The example of config.yaml
