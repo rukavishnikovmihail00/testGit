@@ -7,13 +7,13 @@ ________________________________________________________________________________
 
 There are 4 functions of the Delivery tool:
 - __install__ - read an installation config and install Artifactory to the instance using ansible.
-- __pack__   - read a packing config, download files and docker images using skopeo, create an archive with some structure
+- __pack__   - read a packing config, download files and docker images using skopeo, create an archive with some structure.
 - __upload__ - unpack the archive, parse an uploading config and the archive structure and upload files to Artifactory instance. Show full and delta size of
-repositories
-- __show__   - show space by a repository
+repositories.
+- __show__   - show space by a repository.
 _______________________________________________________________________________________________________________________
 
-## Requirements
+## Prerequisites
 There are the things that have to be pre-installed on your system
 
 - Python 3.8     :white_check_mark:
@@ -28,7 +28,7 @@ There is an information about Delivery tool usage
 
 - __Set your configurations__
 
-    Change config.file and artifactory.yaml according to the example below.
+    Change `config.yaml` and `artifactory.yaml` according to the example below.
 
 - __Setup the tool__
 	
@@ -40,14 +40,14 @@ There is an information about Delivery tool usage
 
 - __Specify your credentials for Artifactory instance__
 
-    Note, that credentials must be `'admin':'password'` for the first Artifactory launch.
+    Note, that credentials must be `admin:password` for the first Artifactory launch.
 ________________________________________________________________________________________________________________________
 
 Now you can use Delivery tool functions:
 
 - __install__ 
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz install -f create.yaml -a artifactory.yaml [repo]
+    usage: **python3 delivery-tool-rukavishnikov.pyz install -f create.yaml -a artifactory.yaml [repo]**
 	
     `repo` is optional, so you can include it if you need to create Generic repository automatically.
 
@@ -94,7 +94,7 @@ ________________________________________________________________________________
 
 This configuration file needs to contain the Artifactory URL specified in `url` section and docker registry.
 In `repositories` section there should be a Generic repository name in `files` and Docker repository name in `docker`.
-`lic_path` is a path to your artifactory.lic file, that contains artifactory license key.
+`lic_path` is a path to your artifactory.lic file, that contains Artifactory license key.
 Besides, please, specify the Docker images in `images` section and your Artifactory home directory in `home_dir`.
 _________________________________________________________________________________________________________________________
 
