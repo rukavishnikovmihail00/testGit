@@ -32,11 +32,11 @@ There is an information about Delivery tool usage
 
 - __Specify your credentials for Artifactory instance__
 
-    Note, that credentials must be `admin:password` for the first Artifactory launch.
+    Note, that credentials must be `ARTIFACTORY_LOG=admin`:`ARTIFACTORY_LOG=password` for the first Artifactory launch.
 
 - __Run the tool__
 	
-    Execute delivery-tool-rukavishnikov-0.1.0.pyz with any function
+    Execute `delivery-tool-rukavishnikov-0.1.0.pyz` with any function
 
 ________________________________________________________________________________________________________________________
 
