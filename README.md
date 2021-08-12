@@ -30,16 +30,17 @@ There is an information about Delivery tool usage
 
     Change `config.yaml` and `artifactory.yaml` according to the example below.
 
-- __Setup the tool__
-	
-    Run `build.sh` bash script. Delivery tool package will be installed.
-
 - __Specify your credentials for Artifactory instance__
 
     Note, that credentials must be `admin:password` for the first Artifactory launch.
+
+- __Run the tool__
+	
+    Execute delivery-tool-rukavishnikov-0.1.0.pyz with any function
+
 ________________________________________________________________________________________________________________________
 
-Now you can use Delivery tool functions:
+That`s how Delivery tool functions are used:
 
 - __install__ 
 
