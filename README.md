@@ -34,10 +34,6 @@ There is an information about Delivery tool usage
 	
     Run `build.sh` bash script. Delivery tool package will be installed.
 
-- __Navigate to the delivery_tool directory__
-
-    usage: **cd delivery_tool**
-
 - __Specify your credentials for Artifactory instance__
 
     Note, that credentials must be `admin:password` for the first Artifactory launch.
@@ -47,23 +43,27 @@ Now you can use Delivery tool functions:
 
 - __install__ 
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz install -f create.yaml -a artifactory.yaml [repo]**
+    usage: **python3 delivery-tool-rukavishnikov.pyz install [-r 1]**
 	
-    `repo` is optional, so you can include it if you need to create Generic repository automatically.
+    `-r` is optional, so you can include it, if you need to create Generic repository automatically.
+    Note,  that `install` option needs sudo privileges.
+
+
+    For the next functions you need to contain `create.yaml` and `artifactory.yaml` files in the same directory as delivery-tool-rukavishnikov.pyz 
 
 - __pack__
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz pack -f config.yaml**
+    usage: **python3 delivery-tool-rukavishnikov.pyz pack**
 
 - __upload__
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz upload -f artifactory.yaml -a ArchContent.zip**
+    usage: **python3 delivery-tool-rukavishnikov.pyz upload**
 
-    *ArchContent.zip is just an archive that is created in the pack option of Delivery tool.*
+    Generic and Docker repositories are required for `upload` and `show` functions
 
 - __show__
 
-    usage: **python3 delivery-tool-rukavishnikov.pyz show -f artifactory.yaml**
+    usage: **python3 delivery-tool-rukavishnikov.pyz show**
 ________________________________________________________________________________________________________________________
 
 ### The example of config.yaml
