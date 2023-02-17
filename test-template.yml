@@ -1,0 +1,4 @@
+.test_echo:
+  image: alpine:3.15
+  script:
+  - echo "TEST FROM TEMPLATE"
